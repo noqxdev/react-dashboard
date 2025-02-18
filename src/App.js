@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -33,7 +41,7 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs() {
+function BasicTabs() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -59,5 +67,14 @@ export default function BasicTabs() {
         Item Three
       </CustomTabPanel>
     </Box>
+  );
+}
+
+export default function App() {
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <BasicTabs />
+    </ThemeProvider>
   );
 }

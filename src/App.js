@@ -7,7 +7,10 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import DescriptionIcon from '@mui/icons-material/Description';
+import StorageIcon from '@mui/icons-material/Storage';
 import LayersIcon from '@mui/icons-material/Layers';
+import PollIcon from '@mui/icons-material/Poll';
+import InfoIcon from '@mui/icons-material/Info';
 import { AppProvider } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 import { useDemoRouter } from '@toolpad/core/internal';
@@ -23,9 +26,9 @@ const NAVIGATION = [
     icon: <DashboardIcon />,
   },
   {
-    segment: 'orders',
-    title: 'Orders',
-    icon: <ShoppingCartIcon />,
+    segment: 'statistics',
+    title: 'Statistics',
+    icon: <PollIcon />,
   },
   {
     kind: 'divider',
@@ -35,9 +38,9 @@ const NAVIGATION = [
     title: 'Analytics',
   },
   {
-    segment: 'reports',
-    title: 'Reports',
-    icon: <BarChartIcon />,
+    segment: 'database',
+    title: 'Database',
+    icon: <StorageIcon />,
     children: [
       {
         segment: 'sales',
@@ -54,7 +57,7 @@ const NAVIGATION = [
   {
     segment: 'integrations',
     title: 'Integrations',
-    icon: <LayersIcon />,
+    icon: <InfoIcon />,
   },
 ];
 
